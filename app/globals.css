@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	:root {
+		--background: 0, 0%, 100%;
+		--foreground: 208, 10%, 53%;
+		--border: 150, 3%, 89%;
+	}
+	/* @media (prefers-color-scheme: dark) {
+    :root {
+      --background: 0, 0%, 100%;
+      --btn-background: 200 10% 9%;
+      --btn-background-hover: 200 10% 12%;
+      --foreground: 208, 10%, 53%;
+    }
+  } */
+}
+
+.animate-in {
+	animation: animateIn 0.3s ease 0.15s both;
+}
+
+@keyframes animateIn {
+	from {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+#hero-title {
+	background: -webkit-linear-gradient(91deg, #324459 -6.2%, #9fb3ca 178.99%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+#primary-btn {
+	background: linear-gradient(
+			180deg,
+			rgba(255, 255, 255, 0.2) 0%,
+			rgba(255, 255, 255, 0) 100%
+		),
+		#3a70f5;
+	box-shadow: 0px 0px 0px 1px rgba(26, 92, 255, 0.6);
+}
+
+.light-scrollbar::-webkit-scrollbar {
+	width: 2px;
+	height: 2px;
+}
+
+.light-scrollbar::-webkit-scrollbar-track {
+	@apply bg-gray-200;
+}
+
+.light-scrollbar::-webkit-scrollbar-thumb {
+	@apply bg-gray-300;
+}
+
+.light-scrollbar::-webkit-scrollbar-thumb:hover {
+	@apply bg-gray-400;
+}
